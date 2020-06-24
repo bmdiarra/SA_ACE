@@ -40,6 +40,29 @@
           </tr>
         </thead>
         <tbody>
+
+        <?php 
+            foreach($chambre as $chambr){
+        ?>
+          <tr>
+            <td>
+              <span class="custom-checkbox">
+                <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                <label for="checkbox1"></label>
+              </span>
+            </td>
+            <td><?= $chambr['num_chambre'] ?></td>
+            <td><?= $chambr['num_batiment'] ?></td>
+            <td><?= $chambr['type_chambre'] ?></td>
+            <td>
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+            </td>
+          </tr>
+
+            <?php } ?>
+
+
           <tr>
             <td>
               <span class="custom-checkbox">
@@ -55,51 +78,7 @@
               <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
             </td>
           </tr>
-          <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                <label for="checkbox1"></label>
-              </span>
-            </td>
-            <td>101</td>
-            <td>5</td>
-            <td>Individuel</td>
-            <td>
-              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                <label for="checkbox1"></label>
-              </span>
-            </td>
-            <td>101</td>
-            <td>5</td>
-            <td>Individuel</td>
-            <td>
-              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                <label for="checkbox1"></label>
-              </span>
-            </td>
-            <td>101</td>
-            <td>5</td>
-            <td>Individuel</td>
-            <td>
-              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-            </td>
-          </tr>
+          
            
         </tbody>
       </table>

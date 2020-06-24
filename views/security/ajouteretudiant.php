@@ -18,20 +18,22 @@
         </div>
         <div class="row">
         <div class="col"><input type="text" class="form-control" name="first_name" placeholder="Naissance" required="required"></div>
-        <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Chambre" required="required">
+        <div class="col">
+          
         </div>
       </div> 
       <br/>
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" name="last_name" placeholder="A generer selon le type" required="required">
           
+          <select type="text" class="form-control" name="first_name" placeholder="Profile" required="required">
+            <option value="">Etat de Bourse</option>
+            <option value="">Boursier</option>
+            <option value="">Non Boursier</option>
+          </select>
         </div>
         <div class="col">
-          <select type="text" class="form-control" name="first_name" placeholder="Profile" required="required">
-            <option value="">Demi bourse</option>
-            <option value="">Bourse Entiere</option>
-          </select>
+          
         </div>
       </div>          
         </div>
