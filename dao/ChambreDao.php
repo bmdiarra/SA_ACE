@@ -17,8 +17,9 @@ class ChambreDao extends Manager {
     }
 
     public function getChambre(){
-        $sql="SELECT * FROM $this->tableName";
-        return $this->executeSelect($sql)!=0;
+      //  $sql="SELECT * FROM $this->tableName";
+      
+        return $this->findAll()!=0;
     }
     
     public function findByLoginAndPwd($login,$pwd){

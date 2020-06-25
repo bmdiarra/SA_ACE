@@ -1,4 +1,6 @@
 <?php
+
+bonjour Moussa
 class SecurityController extends Controller{
 
    public  function __construct(){
@@ -33,19 +35,21 @@ class SecurityController extends Controller{
       }
   
       public function vlisterchambre(){
-         var_dump("salut");
+         
           $this->data_view["title"]="Pour tester votre niveau de culture générale";
           $this->view="listerchambre";
+          $this->dao=new ChambreDao();
+          $chambre=$this->dao->getChambre();
+          var_dump($chambre);
           $this->render();
 
 
-
-          $this->dao=new ChambreDao();
+          //$this->dao=new ChambreDao();
          //Validation
          //$this->validator->isVide($login,"login","Le Login est vide");
          //$this->validator->isVide($password,"password","Le Mot de Passe est vide");
          //if($this->validator->isValid()){
-            $chambre=$this->dao->getChambre();
+           /* $chambre=$this->dao->getChambre();
             
              if($chambre!=null){
                 //Ajouter dans la session
@@ -63,10 +67,12 @@ class SecurityController extends Controller{
                 $this->index();
              }*/
            
-         }else{
+      /*   }else{
             $this->data_view["error"]= $this->validator->getErrors();
             $this->index();
          }
+
+         $this->render();*/
 
       }
   

@@ -18,8 +18,10 @@ class Chambre implements IQuizz {
      }
     
      public  function hydrate($row){
-        $this->id=$row['id_chambre']; 
-        $this->nomComplet=$row['num_chambre']; 
+        $this->id_chambre=$row['id_chambre']; 
+        $this->num_chambre=$row['num_chambre'];
+        $this->num_batiment=$row['num_batiment'];
+        $this->type_chambre=$row['type_chambre']; 
          
      }
       //Methodes

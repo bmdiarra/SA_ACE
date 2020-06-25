@@ -42,6 +42,7 @@
         <tbody>
 
         <?php 
+        var_dump($chambre);
             foreach($chambre as $chambr){
         ?>
           <tr>
