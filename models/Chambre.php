@@ -2,10 +2,10 @@
 class Chambre implements IQuizz {
     //Attributs
        //Encapsulation
-        protected  $id_chambre;
-        protected  $num_chambre;
-        protected  $num_batiment;
-        protected  $type_chambre;
+        public  $id_chambre;
+        public  $num_chambre;
+        public  $num_batiment;
+        public  $type_chambre;
         
 
 // public abstract  function hydrate($row);

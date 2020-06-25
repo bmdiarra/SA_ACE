@@ -42,8 +42,10 @@
         <tbody>
 
         <?php 
-        var_dump($chambre);
-            foreach($chambre as $chambr){
+        var_dump(@$chambre);
+
+            foreach(@$chambre[0] as $clef=>$valeur){
+                var_dump($valeur);
         ?>
           <tr>
             <td>
@@ -52,9 +54,9 @@
                 <label for="checkbox1"></label>
               </span>
             </td>
-            <td><?= $chambr['num_chambre'] ?></td>
-            <td><?= $chambr['num_batiment'] ?></td>
-            <td><?= $chambr['type_chambre'] ?></td>
+            <td><?= $valeur ?></td>
+            <td><?= $valeur ?></td>
+            <td><?= $valeur ?></td>
             <td>
               <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
               <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>

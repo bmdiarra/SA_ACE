@@ -9,6 +9,7 @@ require_once("./models/Jeu.php");
 */
 //Chargement dynamique  des classes=> AutoLoading
 define("BASE_URL","http://localhost/live_poo");
+//define("BASE_URL","http://bmdconception.alwaysdata.net/live_poo");
 require_once("./libs/Router.php");
 $router=new Router();
 $router->route();

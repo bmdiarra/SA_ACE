@@ -1,6 +1,5 @@
 <?php
 
-bonjour Moussa
 class SecurityController extends Controller{
 
    public  function __construct(){
@@ -40,7 +39,8 @@ class SecurityController extends Controller{
           $this->view="listerchambre";
           $this->dao=new ChambreDao();
           $chambre=$this->dao->getChambre();
-          var_dump($chambre);
+          
+          $this->data_view["chambre"]=$chambre;
           $this->render();
 
 

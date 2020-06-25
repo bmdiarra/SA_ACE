@@ -9,6 +9,7 @@ abstract class Manager implements IDao{
       //Connexion est fermée
       if($this->pdo==null){
           try{
+            $this->pdo = new PDO("mysql:host=mysql-bmdconception.alwaysdata.net;dbname=bmdconception_bd","206341","bmd2407237");
             $this->pdo = new PDO("mysql:host=localhost;dbname=sa_ecu","root","");
             $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
           }catch(PDOException $ex){
@@ -52,7 +53,7 @@ abstract class Manager implements IDao{
     $sql="select * from $this->tableName";
     
     $data=$this->executeSelect($sql);
-    
+    return $data;
   }
 
 public function findById($id){

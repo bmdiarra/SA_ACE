@@ -5,4 +5,5 @@ interface IDao{
     public function delete($id);
     public function findAll();
     public function findById($id);
+    public function getChambre();
 }
