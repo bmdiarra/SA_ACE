@@ -35,44 +35,13 @@ class SecurityController extends Controller{
   
       public function vlisterchambre(){
          
-          $this->data_view["title"]="Pour tester votre niveau de culture générale";
           $this->view="listerchambre";
           $this->dao=new ChambreDao();
           $chambre=$this->dao->getChambre();
-          
+          //var_dump($chambre->fetch(PDO::FETCH_ASSOC));
           $this->data_view["chambre"]=$chambre;
           $this->render();
 
-
-          //$this->dao=new ChambreDao();
-         //Validation
-         //$this->validator->isVide($login,"login","Le Login est vide");
-         //$this->validator->isVide($password,"password","Le Mot de Passe est vide");
-         //if($this->validator->isValid()){
-           /* $chambre=$this->dao->getChambre();
-            
-             if($chambre!=null){
-                //Ajouter dans la session
-             //  if($user->getProfil()==="admin"){
-                 // $this->data_view["title"]="Pour proposer des quizz";
-                  $this->layout="default";
-                  $this->view="listerchambre";
-                  $this->render();    
-              /* }else{
-                  echo "Vue Joueur";
-               }*/
-            /* }else{
-                //User Not Existe
-                $this->data_view["error"]="Login Mot de Passe Incorrect";
-                $this->index();
-             }*/
-           
-      /*   }else{
-            $this->data_view["error"]= $this->validator->getErrors();
-            $this->index();
-         }
-
-         $this->render();*/
 
       }
   

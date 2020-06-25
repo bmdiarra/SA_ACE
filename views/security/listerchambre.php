@@ -42,10 +42,9 @@
         <tbody>
 
         <?php 
-        var_dump(@$chambre);
 
-            foreach(@$chambre[0] as $clef=>$valeur){
-                var_dump($valeur);
+            foreach(@$chambre as $clef=>$valeur){
+              
         ?>
           <tr>
             <td>
@@ -54,16 +53,16 @@
                 <label for="checkbox1"></label>
               </span>
             </td>
-            <td><?= $valeur ?></td>
-            <td><?= $valeur ?></td>
-            <td><?= $valeur ?></td>
+            <td><?= $valeur->getNumChambre() ?></td>
+            <td><?= $valeur->getNumBatiment() ?></td>
+            <td><?= $valeur->getTypeChambre() ?></td>
             <td>
               <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
               <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
             </td>
           </tr>
 
-            <?php } ?>
+            <?php }  ?>
 
 
           <tr>
