@@ -30,6 +30,7 @@ abstract class Manager implements IDao{
   public function executeUpdate($sql){
           $this->getConnexion();
            $nbreLigne= $this->pdo->exec($sql);
+          //var_dump($nbreLigne);
           $this->closeConnexion();
           return $nbreLigne;
    }
@@ -64,7 +65,7 @@ public function findById($id){
 }
 
 public function delete($id){
-    $sql="delete from $this->tableName where id=$id";
+    $sql="delete from $this->tableName where id_chambre='{$id['id_chambre']}'";
     return $this->executeUpdate($sql)!=0;
 }
 

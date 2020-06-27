@@ -40,7 +40,15 @@
         <br/>
           
     <div class="form-group">
+    <div class="row">
+            <div class="col">
             <button type="submit" class="btn btn-primary btn-lg btn-block">Enregistrer</button>
+            </div>
+            <div class="col">
+            <button type="submit" class="btn btn-danger btn-lg btn-block">Annuler</button>
+            </div>
+          
+          </div>
         </div>
     </form>
 </div>

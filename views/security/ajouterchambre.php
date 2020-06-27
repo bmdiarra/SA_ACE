@@ -4,7 +4,6 @@
     <h2>Enregistrer Chambre</h2>
         <div class="form-group">
       <div class="row">
-        <div class="col"><input type="text" class="form-control" name="prenom" placeholder="Numero Chambre" required="required"></div>
         <div class="col"><input type="text" class="form-control" name="nom" placeholder="Numero Batiment" required="required"></div>
       </div>          
         </div>
@@ -28,7 +27,16 @@
         <br/>
           
     <div class="form-group">
+          <div class="row">
+            <div class="col">
             <button type="submit" class="btn btn-primary btn-lg btn-block">Enregistrer</button>
+            </div>
+            <div class="col">
+            <button type="submit" class="btn btn-danger btn-lg btn-block">Annuler</button>
+            </div>
+          
+          </div>
+            
         </div>
     </form>
 </div>
