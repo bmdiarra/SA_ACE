@@ -2,18 +2,20 @@
 class Etudiant implements IQuizz {
     //Attributs
        //Encapsulation
-        protected  $id;
-        protected  $matricule;
-        protected  $nom;
-        protected  $prenom;
-        protected  $pwd;
-        protected  $login;
-        protected  $profil;
+        protected  $id_etudiant;
+        protected  $matricule_etu;
+        protected  $nom_etu;
+        protected  $prenom_etu;
+        protected  $telephone_etu;
+        protected  $login_etudiant;
+        protected  $type_etudiant;
         protected  $id_chambre;
-        protected  $email;
-        protected  $datenaissance;
+        protected  $email_etu;
+        protected  $datenaiss_etu;
         protected  $loger;
         protected  $type_bourse;
+        protected  $adresse_etu;
+        
 
 // public abstract  function hydrate($row);
   
@@ -25,46 +27,56 @@ class Etudiant implements IQuizz {
      }
     
      public  function hydrate($row){
-        $this->id=$row['id']; 
-        $this->nomComplet=$row['nomComplet']; 
-        $this->profil=$row['profil']; 
+        $this->$id_etudiant=$row['$id_etudiant']; 
+        $this->matricule_etu=$row['matricule_etu']; 
+        $this->nom_etu=$row['nom_etu'];
+        $this->prenom_etu=$row['prenom_etu'];
+        $this->email_etu=$row['email_etu'];
+        $this->telephone_etu=$row['telephone_etu'];
+        $this->datenaiss_etu=$row['datenaiss_etu'];
+        $this->type_etudiant=$row['type_etudiant'];
+        $this->loger=$row['loger'];
+        $this->type_bourse=$row['type_bourse'];
+        $this->adresse_etu=$row['adresse_etu'];
+        $this->id_chambre=$row['id_chambre']; 
+        
      }
       //Methodes
         //Getters
-        public function getId(){
-            return $this->id;
+        public function getIdEtudiant(){
+            return $this->$id_etudiant;
         }
 
-        public function getMatricule(){
-            return $this->matricule;
+        public function getMatriculeEtu(){
+            return $this->matricule_etu;
         }
 
-        public function getNom(){
-            return $this->nom;
+        public function getNomEtudiant(){
+            return $this->nom_etudiant;
         }
 
-        public function getPrenom(){
-            return $this->prenom;
+        public function getPrenomEtudiant(){
+            return $this->prenom_etudiant;
         }
 
-        public function getChambre(){
-            return $this->id_chambre;
+        public function getEmailEtudiant(){
+            return $this->email_etu;
         }
 
-        public function getPwd(){
-            return $this->pwd;
+        public function getTelephoneEtu(){
+            return $this->telephone_etu;
         }
 
-        public function getLogin(){
-            return $this->login;
+        public function getDatenaissEtu(){
+            return $this->datenaiss_etu;
         }
 
         public function getEmail(){
             return $this->email;
         }
 
-        public function getDatenaissance(){
-            return $this->datenaissance;
+        public function getTypeEtu(){
+            return $this->type_etudiant;
         }
 
         public function getLoger(){
@@ -79,30 +91,34 @@ class Etudiant implements IQuizz {
             return $this->profil;
         }
 
+        public function getIdChambre(){
+            return $this->id_chambre;
+        }
+
         //Setters
     
-        public function setId($id){
+        public function setIdEtudiant($id){
              $this->id=$id;
         }
 
-        public function setMatricule($matricule){
-            $this->matricule=$matricule;
+        public function setMatriculeEtu($matricule_etu){
+            $this->matricule=$matricule_etu;
        }
 
-        public function setNom($nom){
-             $this->nom=$nom;
+        public function setNom($nom_etudiant){
+             $this->nom_etu=$nom_etudiant;
         }
 
-        public function setPrenom($prenom){
-            $this->nom=$prenom;
+        public function setPrenomEtudiant($prenom_etudiant){
+            $this->prenom_etu=$prenom_etu;
        }
 
-        public function setPwd($pwd){
-            $this->pwd=$pwd;
+        public function setEmailEtudiant($email_etu){
+            $this->email_etu=$email_etu;
         }
 
-        public function setLogin($login){
-             $this->login=$login;
+        public function setTelephoneEtu($telephone_etu){
+             $this->telephone_etu=$telephone_etu;
         }
 
         public function setChambre($chambre){
@@ -113,19 +129,27 @@ class Etudiant implements IQuizz {
             $this->email=$avatar;
         }
 
-        public function setProfil($profil){
-            $this->profil=$profil;
+        public function setTypeEtudiant($type_etudiant){
+            $this->type_etudiant=$type_etudiant;
         }
 
-        public function setDatenaissance($profil){
-            $this->datenaissance=$profil;
+        public function setDatenaissEtu($datenaiss_etu){
+            $this->datenaiss_etu=$datenaiss_etu;
         }
 
         public function setLoger($loger){
             $this->loger=$loger;
         }
 
-        public function setType_bourse($typebourse){
+        public function setTypeBourse($typebourse){
             $this->type_bourse=$typebourse;
+        }
+
+        public function setAdresseEtu($adresse_etu){
+            $this->adresse_etu=$adresse_etu;
+        }
+
+        public function setIdChambre($id_chambre){
+            $this->id_chambre=$id_chambre;
         }
 }

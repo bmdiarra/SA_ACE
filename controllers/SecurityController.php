@@ -61,9 +61,19 @@ class SecurityController extends Controller{
       }
   
       public function vajouteretudiant(){
-      $this->data_view["title"]="Pour tester votre niveau de culture générale";
+         
       $this->view="ajouteretudiant";
+     /* $this->dao=new EtudiantDao();
+      $this->dao->add($_POST);*/
       $this->render();
+      }
+
+      public function venregistreretudiant(){
+         var_dump($_POST);
+      /*$this->view="ajouteretudiant";
+      $this->dao=new EtudiantDao();
+      $this->dao->add($_POST);
+      $this->render();*/
       }
   
       public function vajouterchambre(){
@@ -71,6 +81,8 @@ class SecurityController extends Controller{
       $this->view="ajouterchambre";
       $this->render();
       }
+
+      
      
   
 
