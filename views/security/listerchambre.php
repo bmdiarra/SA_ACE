@@ -57,6 +57,7 @@
             <td>
             
               <a href="#editEmployeeModal" id_chambre="<?=$valeur->getIdChambre()?>" num_chambre="<?=$valeur->getNumChambre()?>" num_batimen="<?=$valeur->getNumChambre()?>" type_chambr="<?=$valeur->getTypeChambre()?>" class="edit modifi" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+
               <a href="#deleteEmployeeModal" id_chambre="<?=$valeur->getIdChambre()?>" num_chambre="<?=$valeur->getNumChambre()?>" num_batimen="<?=$valeur->getNumChambre()?>" type_chambr="<?=$valeur->getTypeChambre()?>" class="delete _delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
             </td>
           </tr>
@@ -176,7 +177,7 @@ $('.modifi').on("click",function(){
               data: {id_chambre:$id_chambre,num_chambre:$num_chambre,num_batiment:$num_batiment,type_chambre:$type_chambre},
               dataType: "text",
               success: function (data) {
-                  alert(data);
+                  //alert(data);
                 }
 
 
@@ -191,7 +192,7 @@ $('.modifi').on("click",function(){
 
 $('._delete').on("click",function(){
    $id_chambre= $(this).attr("id_chambre")
-   alert($id_chambre);
+   //alert($id_chambre);
 
    $('.confirm_delete').on('click',function(){
     $.ajax({
@@ -202,7 +203,7 @@ $('._delete').on("click",function(){
               data: {id_chambre:$id_chambre},
               dataType: "text",
               success: function (data) {
-                  alert(data);
+                 // alert(data);
                 }
 
     })

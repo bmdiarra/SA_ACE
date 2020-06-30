@@ -43,13 +43,7 @@ class SecurityController extends Controller{
       }
 
       public function vmodifierchambre(){
-         
-        /* if(isset($_POST['idc']) && isset($_POST['numc']) && isset($_POST['numb']) && isset($_POST['typec'])){
-            $tab=['idc'=>$_POST['idc'],
-               'numc'=>$_POST['numc'],
-               'numb'=>$_POST['numb'],
-               'typec'=>$_POST['typec'] ];
-         }*/
+         var_dump($_POST);
           $this->view="listerchambre";
           $this->dao=new ChambreDao();
           $this->dao->update($_POST);

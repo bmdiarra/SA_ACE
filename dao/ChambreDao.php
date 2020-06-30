@@ -16,12 +16,6 @@ class ChambreDao extends Manager {
         $sql="UPDATE $this->tableName SET num_batiment = '{$obj['num_batiment']}', type_chambre = '{$obj['type_chambre']}' WHERE id_chambre = '{$obj['id_chambre']}' ";
         var_dump($sql);
 
-       /* $sql="UPDATE $this->tableName SET num_batiment= :num_batiment, type_chambre= :type_chambre WHERE id=:id_chambre ";
-        $sql->execute(array(
-            'id_chambre' => $obj['id_chambre'],
-            'num_batiment' => $obj['num_batiment'],
-            'type_chambre' => $obj['type_chambre']
-        ));*/
         
         $this->executeUpdate($sql);
         //var_dump($this->executeUpdate($sql));
